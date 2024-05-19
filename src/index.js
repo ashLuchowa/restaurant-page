@@ -1,5 +1,5 @@
 // Import CSS
-import './style.css';
+import './style.scss';
 
 // Import function
 import initialPage from './initialPage';

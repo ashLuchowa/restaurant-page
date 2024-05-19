@@ -1,0 +1,48 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+}
+.container-fluid {
+    margin: 0 10px;
+}
+
+/* NAVIGATION */
+header {
+    nav {
+        margin-top: 10px;
+        .main-nav {
+            display: flex;
+            justify-content: end;
+            gap: 10px;
+            button {
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* CONTENT */
+#content {
+    .main-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+    }
+
+    .content-image {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .main-para {
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        font-size: 18px;
+    }
+}
