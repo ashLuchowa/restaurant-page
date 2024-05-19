@@ -55,3 +55,14 @@ header {
     background-color: black;
     color: white;
 }
+
+/* CONTENT */
+.main-menu {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    .menu-item {
+        background-color: rgb(127, 229, 255);
+        border-radius: 5px;
+    }
+}

@@ -15,31 +15,42 @@ const menuPage = () => {
     // Append <div> to main content
     mainContent.appendChild(mainTitle);
 
-    // Load image
-    const myImage = new Image();
-    myImage.src = img1;
-    myImage.classList.add('content-image');
-    // Create container div with a class name and append <image>
-    const mainImageContainer = document.createElement('div');
-    mainImageContainer.classList.add('main-image');
-    mainImageContainer.appendChild(myImage);
-    // Append container div to main content
-    mainContent.appendChild(mainImageContainer);
-    
-    // Create text node and create <p>
-    let text = document.createTextNode("Where culinary excellence meets an inviting atmosphere. Here, we blend traditional flavors with modern culinary techniques to bring you an unforgettable dining experience.");
-    const para = document.createElement('p');
-    // Append text node to <p> tag
-    para.appendChild(text);
-    // Append <p> to <div> with a class name
-    const mainPara = document.createElement('div');
-    mainPara.classList.add('main-para');
-    mainPara.appendChild(para);
-    // Append <div> to main content
-    mainContent.appendChild(mainPara);
+    // Menu Content
+    // Create and append main-menu div
+    const mainMenu = document.createElement('div');
+    mainMenu.classList.add('main-menu');
+    mainContent.appendChild(mainMenu);
+
+    menuLibrary.forEach((menuItem) => {
+        // Create a div for each menu item
+        const menuItemContainer = document.createElement('div');
+        menuItemContainer.classList.add('menu-item');
+        mainMenu.appendChild(menuItemContainer);
+
+        // Append the data
+        menuItemContainer.textContent = menuItem.title;
+    });
 
     return mainContent;
 }
+
+class Menu {
+    constructor(title, description, img, price) {
+        this.title = title;
+        this.description = description;
+        this.img = img;
+        this.price = price;
+    }
+}
+
+let menu001 = new Menu('Cheese Pasta', 'A pasta marinated in cheese', '', 23);
+let menu002 = new Menu('Rice Soup', 'Rice with soup', '', 10);
+let menu003 = new Menu('Nanaki Chicken', 'Grilled Chicken with sauce', '', 12);
+let menu004 = new Menu('Burito', 'A burito with lettice only', '', 5);
+
+// menu library
+let menuLibrary = [menu001, menu002, menu003, menu004];
+
 
 export default menuPage;
 
