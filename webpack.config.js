@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { width } = require('cli');
 
 module.exports = {
     mode: 'development',
@@ -29,12 +30,20 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/i,
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                use: [
+                    {
+                      loader: "webpack-image-resize-loader",
+                      options: {
+                        quality: 20,
+                      },
+                    },
+                  ],
             },
         ],
-    },
+      },
 };
