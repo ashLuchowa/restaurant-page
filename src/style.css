@@ -1,8 +1,8 @@
-#text {
+/* #text {
     background-color: red;
     color: white;
-}
+} */
 
-body {
-    font-size: large;
+.content-image {
+    height: 50vh;
 }

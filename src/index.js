@@ -1,11 +1,16 @@
 import './style.css';
 import img1 from './img1.jpg';
 
-const mainContent = document.getElementById('content');
+function initialPage() {
+    const mainContent = document.getElementById('content');
 
-const myImage = new Image();
-myImage.src = img1;
+    // Add image to div#content
+    const myImage = new Image();
+    myImage.src = img1;
+    myImage.classList.add('content-image');
+    mainContent.appendChild(myImage);
 
-mainContent.appendChild(myImage);
+    return mainContent;
+}
 
-console.log('hi');
+initialPage();
