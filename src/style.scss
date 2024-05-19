@@ -62,13 +62,16 @@ header {
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     .menu-item {
+        height: 450px;
         position: relative;
         background-color: #9CC1D9;
         border-radius: 5px;
         padding: 10px;
         cursor: pointer;
         img {
+            height: 85%;
             width: 100%;
+            object-fit: cover;
         }
         .menu-cost {
             position: absolute;

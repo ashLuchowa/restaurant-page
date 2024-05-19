@@ -1,4 +1,11 @@
-import img1 from './img1.jpg';
+import img2 from './img2.jpg';
+import img3 from './img3.jpg';
+import img4 from './img4.jpg';
+import img5 from './img5.jpg';
+import img6 from './img6.jpg';
+import img7 from './img7.jpg';
+import img8 from './img8.jpg';
+import img9 from './img9.jpg';
 
 const menuPage = () => {
     
@@ -61,14 +68,14 @@ class Menu {
     }
 }
 
-let menu001 = new Menu('Cheese Pasta', 'A pasta marinated in cheese', img1, 23);
-let menu002 = new Menu('Rice Soup', 'Rice with soup', img1, 10);
-let menu003 = new Menu('Nanaki Chicken', 'Grilled Chicken with sauce', img1, 12);
-let menu004 = new Menu('Burito', 'A burito with lettice only', img1, 5);
-let menu005 = new Menu('Orange Chicken', 'Boneless skinless chicken breast', img1, 12);
-let menu006 = new Menu('Aussie Pizza', 'Beef, fresh tomato, feta cheese and spinash', img1, 24);
-let menu007 = new Menu('Tandoori Chicken', 'Marinated in yogurt and spices', img1, 15.90);
-let menu008 = new Menu('Croissant', 'Filled with ham and cheese', img1, 8);
+let menu001 = new Menu('Cheese Pasta', 'A pasta marinated in cheese', img2, 23);
+let menu002 = new Menu('Rice Soup', 'Rice with soup', img3, 10);
+let menu003 = new Menu('Nanaki Chicken', 'Grilled Chicken with sauce', img4, 12);
+let menu004 = new Menu('Burito', 'A burito with lettice only', img5, 5);
+let menu005 = new Menu('Orange Chicken', 'An actual live chicken', img6, 12);
+let menu006 = new Menu('Aussie Pizza', 'Beef, fresh tomato, feta cheese and spinash', img7, 24);
+let menu007 = new Menu('Tandoori Chicken', 'Marinated in yogurt and spices', img8, 15.90);
+let menu008 = new Menu('Croissant', 'Filled with ham and cheese', img9, 8);
 
 // menu library
 let menuLibrary = [menu001, menu002, menu003, menu004, menu005, menu006, menu007, menu008];
