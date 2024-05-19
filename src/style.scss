@@ -59,10 +59,22 @@ header {
 /* CONTENT */
 .main-menu {
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     .menu-item {
-        background-color: rgb(127, 229, 255);
+        position: relative;
+        background-color: #9CC1D9;
         border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        img {
+            width: 100%;
+        }
+        .menu-cost {
+            position: absolute;
+            bottom: 10px;
+            right: 8px;
+            font-size: 30px;
+        }
     }
 }

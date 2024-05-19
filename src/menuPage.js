@@ -4,7 +4,7 @@ const menuPage = () => {
     
     const mainContent = document.getElementById('content');
     // Create headline and create <h1>
-    let titleText = document.createTextNode('This is the menu page');
+    let titleText = document.createTextNode('Browse our menu page');
     const title = document.createElement('h1');
     // Append title to <h1>
     title.appendChild(titleText);
@@ -27,8 +27,26 @@ const menuPage = () => {
         menuItemContainer.classList.add('menu-item');
         mainMenu.appendChild(menuItemContainer);
 
-        // Append the data
-        menuItemContainer.textContent = menuItem.title;
+        // Append Image
+        const menuImage = new Image();
+        menuImage.src = menuItem.img;
+        menuItemContainer.appendChild(menuImage);
+
+        // Append Title
+        const menuTitle = document.createElement('h2');
+        menuTitle.textContent = menuItem.title;
+        menuItemContainer.appendChild(menuTitle);
+
+        // Append Description
+        const menuDescription = document.createElement('p');
+        menuDescription.textContent = menuItem.description;
+        menuItemContainer.appendChild(menuDescription);
+
+        // Append Price
+        const menuCost = document.createElement('p');
+        menuCost.classList.add('menu-cost');
+        menuCost.textContent = `$${menuItem.price}`;
+        menuItemContainer.appendChild(menuCost);
     });
 
     return mainContent;
@@ -43,13 +61,17 @@ class Menu {
     }
 }
 
-let menu001 = new Menu('Cheese Pasta', 'A pasta marinated in cheese', '', 23);
-let menu002 = new Menu('Rice Soup', 'Rice with soup', '', 10);
-let menu003 = new Menu('Nanaki Chicken', 'Grilled Chicken with sauce', '', 12);
-let menu004 = new Menu('Burito', 'A burito with lettice only', '', 5);
+let menu001 = new Menu('Cheese Pasta', 'A pasta marinated in cheese', img1, 23);
+let menu002 = new Menu('Rice Soup', 'Rice with soup', img1, 10);
+let menu003 = new Menu('Nanaki Chicken', 'Grilled Chicken with sauce', img1, 12);
+let menu004 = new Menu('Burito', 'A burito with lettice only', img1, 5);
+let menu005 = new Menu('Orange Chicken', 'Boneless skinless chicken breast', img1, 12);
+let menu006 = new Menu('Aussie Pizza', 'Beef, fresh tomato, feta cheese and spinash', img1, 24);
+let menu007 = new Menu('Tandoori Chicken', 'Marinated in yogurt and spices', img1, 15.90);
+let menu008 = new Menu('Croissant', 'Filled with ham and cheese', img1, 8);
 
 // menu library
-let menuLibrary = [menu001, menu002, menu003, menu004];
+let menuLibrary = [menu001, menu002, menu003, menu004, menu005, menu006, menu007, menu008];
 
 
 export default menuPage;
