@@ -13,20 +13,34 @@ function component() {
     // Clicking menu tab
     buttons.forEach((button) => {
         button.addEventListener('click', (e) => {
+            addActiveClass(button);
+
             if(e.target.textContent === 'Home') {
-                mainContent.innerHTML = '';
-                initialPage();
+                generatePage(mainContent, initialPage);
             } else if(e.target.textContent === 'Menu') {
-                mainContent.innerHTML = '';
-                menuPage();
+                generatePage(mainContent, menuPage);
             } else if(e.target.textContent === 'Contact') {
-                mainContent.innerHTML = '';
-                contactPage();
+                generatePage(mainContent, contactPage);
             }
         });
     });
 
     initialPage();
+}
+
+// Add active class to buttons
+function addActiveClass(button) {
+    const activeClass = document.querySelector('.active');
+    if(activeClass) {
+        activeClass.classList.remove('active');
+    }
+    button.classList.add('active');
+}
+
+// Generate page function
+function generatePage(mainContent, pageModules) {
+    mainContent.innerHTML = '';
+    return pageModules();
 }
 
 component();
