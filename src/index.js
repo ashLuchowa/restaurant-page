@@ -4,6 +4,7 @@ import './style.scss';
 // Import function
 import initialPage from './initialPage';
 import menuPage from './menuPage';
+import contactPage from './contactPage';
 
 function component() {
     const mainContent = document.getElementById('content');
@@ -18,6 +19,9 @@ function component() {
             } else if(e.target.textContent === 'Menu') {
                 mainContent.innerHTML = '';
                 menuPage();
+            } else if(e.target.textContent === 'Contact') {
+                mainContent.innerHTML = '';
+                contactPage();
             }
         });
     });
