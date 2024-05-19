@@ -1,10 +1,10 @@
 import img1 from './img1.jpg';
 
-const initialPage = () => {
+const menuPage = () => {
     
     const mainContent = document.getElementById('content');
     // Create headline and create <h1>
-    let titleText = document.createTextNode('Welcome to Kaligula Restaurant');
+    let titleText = document.createTextNode('This is the menu page');
     const title = document.createElement('h1');
     // Append title to <h1>
     title.appendChild(titleText);
@@ -41,5 +41,5 @@ const initialPage = () => {
     return mainContent;
 }
 
-export default initialPage;
+export default menuPage;
 
