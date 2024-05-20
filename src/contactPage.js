@@ -34,9 +34,17 @@ const firstNameLabel = new CreateInputs('label', 'for', 'First Name', 'firstName
 const firstNameInput = new CreateInputs('input', 'type', 'First Name', 'firstName', 'text');
 const lastNameLabel = new CreateInputs('label', 'for', 'Last Name', 'lastName', 'lastName');
 const lastNameInput = new CreateInputs('input', 'type', 'Last Name', 'lastName', 'text');
+const phoneLabel = new CreateInputs('label', 'for', 'Phone Number', 'phoneNumber', 'phoneNumber');
+const phoneInput = new CreateInputs('input', 'type', 'Phone Number', 'phoneNumber', 'number');
+const emailLabel = new CreateInputs('label', 'for', 'Email', 'email', 'email');
+const emailInput = new CreateInputs('input', 'type', 'Email', 'email', 'email');
+const messageLabel = new CreateInputs('label', 'for', 'Leave a message', 'message', 'message');
+const messageInput = new CreateInputs('input', 'type', 'message', 'message', 'message');
+const submitBtn = new CreateInputs('input', 'type', 'submit', 'submit', 'submit');
 
 // Form Array
-const formArray = [firstNameLabel, firstNameInput, lastNameLabel, lastNameInput];
+const formArray = [firstNameLabel, firstNameInput, lastNameLabel, lastNameInput, phoneLabel, phoneInput,
+                   emailLabel, emailInput, messageLabel, messageInput, submitBtn];
 
 // Create form inputs and labels
 function createFormInputs(mainContent) {
