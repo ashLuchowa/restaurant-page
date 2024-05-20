@@ -32,13 +32,15 @@ class CreateInputs {
 // Form Input boxes
 const firstNameLabel = new CreateInputs('label', 'for', 'First Name', 'firstName', 'firstName');
 const firstNameInput = new CreateInputs('input', 'type', 'First Name', 'firstName', 'text');
+const lastNameLabel = new CreateInputs('label', 'for', 'Last Name', 'lastName', 'lastName');
+const lastNameInput = new CreateInputs('input', 'type', 'Last Name', 'lastName', 'text');
 
 // Form Array
-const formArray = [firstNameLabel, firstNameInput];
+const formArray = [firstNameLabel, firstNameInput, lastNameLabel, lastNameInput];
 
 // Create form inputs and labels
 function createFormInputs(mainContent) {
-    
+
     // Create form container
     const mainFormContainer = document.createElement('form');
     mainFormContainer.classList.add('main-form');
