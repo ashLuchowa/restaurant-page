@@ -4,7 +4,7 @@ const contactPage = () => {
     
     const mainContent = document.getElementById('content');
     // Create headline and create <h1>
-    let titleText = document.createTextNode('This is the contact page');
+    let titleText = document.createTextNode('Contact Us');
     const title = document.createElement('h1');
     // Append title to <h1>
     title.appendChild(titleText);
@@ -15,30 +15,54 @@ const contactPage = () => {
     // Append <div> to main content
     mainContent.appendChild(mainTitle);
 
-    // Load image
-    const myImage = new Image();
-    myImage.src = img1;
-    myImage.classList.add('content-image');
-    // Create container div with a class name and append <image>
-    const mainImageContainer = document.createElement('div');
-    mainImageContainer.classList.add('main-image');
-    mainImageContainer.appendChild(myImage);
-    // Append container div to main content
-    mainContent.appendChild(mainImageContainer);
-    
-    // Create text node and create <p>
-    let text = document.createTextNode("Where culinary excellence meets an inviting atmosphere. Here, we blend traditional flavors with modern culinary techniques to bring you an unforgettable dining experience.");
-    const para = document.createElement('p');
-    // Append text node to <p> tag
-    para.appendChild(text);
-    // Append <p> to <div> with a class name
-    const mainPara = document.createElement('div');
-    mainPara.classList.add('main-para');
-    mainPara.appendChild(para);
-    // Append <div> to main content
-    mainContent.appendChild(mainPara);
+    createFormInputs(mainContent);
+}
 
-    return mainContent;
+// Contact Form Class
+class CreateInputs {
+    constructor(element, attribute, name, id, properties) {
+        this.element = element,
+        this.attribute = attribute,
+        this.name = name,
+        this.id = id;
+        this.properties = properties;
+    }
+}
+
+// Form Input boxes
+const firstNameLabel = new CreateInputs('label', 'for', 'First Name', 'firstName', 'firstName');
+const firstNameInput = new CreateInputs('input', 'type', 'First Name', 'firstName', 'text');
+
+// Form Array
+const formArray = [firstNameLabel, firstNameInput];
+
+// Create form inputs and labels
+function createFormInputs(mainContent) {
+    
+    // Create form container
+    const mainFormContainer = document.createElement('form');
+    mainFormContainer.classList.add('main-form');
+    mainContent.appendChild(mainFormContainer);
+
+    // Generate form inputs
+    formArray.forEach((formArrayItem) => {
+        if(formArrayItem.element === 'label') {
+            const formItem = document.createElement(formArrayItem.element);
+            const formText = document.createTextNode(formArrayItem.name);
+            formItem.setAttribute(formArrayItem.attribute, formArrayItem.properties);
+            mainFormContainer.appendChild(formItem);
+            formItem.appendChild(formText);
+        } else {
+            const formItem = document.createElement(formArrayItem.element);
+            const formText = document.createTextNode(formArrayItem.name);
+            formItem.setAttribute(formArrayItem.attribute, formArrayItem.properties);
+            formItem.setAttribute('name', formArrayItem.id);
+            formItem.setAttribute('id', formArrayItem.id);
+            mainFormContainer.appendChild(formItem);
+            formItem.appendChild(formText);
+        }
+    });
+
 }
 
 export default contactPage;
