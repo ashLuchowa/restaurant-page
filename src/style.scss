@@ -9,6 +9,7 @@
 
 /* NAVIGATION */
 header {
+    height: 10vh;
     nav {
         margin-top: 10px;
         .main-nav {
@@ -28,20 +29,18 @@ header {
 /* CONTENT */
 #content {
     .main-title {
+        height: 10vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 15vh;
         text-transform: uppercase;
     }
-
     .content-image {
         height: 50vh;
         width: 100%;
         object-fit: cover;
         border-radius: 10px;
     }
-    
     .main-para {
         display: flex;
         justify-content: center;
@@ -115,4 +114,12 @@ header {
         color: white;
         text-transform: uppercase;
     }
+}
+
+/* FOOTER */
+footer {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
